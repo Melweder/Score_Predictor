@@ -1,5 +1,6 @@
 DataProcessing\DataRetriever.class
 GUI\ConfigWindowController$1.class
+GUI\VersionWindowController.class
 GUI\AppController.class
 GUI\SourceWindowController.class
 DataProcessing\TokenArrays.class

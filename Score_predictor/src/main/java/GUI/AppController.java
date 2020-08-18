@@ -57,6 +57,9 @@ public class AppController {
                 scoreLabel.setText("Uzupełnij konfigurację!");
             }
         }
+        else{
+            setScoreLabel();
+        }
 
     }
 
@@ -90,6 +93,46 @@ public class AppController {
         } catch (IOException exception) {
             System.out.println(exception.getMessage());
         }
+    }
+
+    @FXML
+    void onSourceFileAction(ActionEvent event) {
+        teamsLabel.setFont(new Font(12));
+        teamsLabel.setText("");
+        scoreLabel.setFont(new Font(16));
+        scoreLabel.setText("Pliki źródłowe obłsugiwane przez program powinny byc zapisane w formacie tektowym\n" +
+                            "z rozszerzeniem .cxv lub .txt. Inne rodzaje plików nie są oficjalnie wspierane!\n" +
+                            "Plik źródłowy powinien zawierać informacje o nazwach drużyn i wyniku spotkania\n" +
+                            "uszeregowanych w kolumny oraz opatrzonych odpowiednimi nagłówkami!\n" +
+                            "Przykładowy poprawny plik źródłowy dostępny jest pod adresem:\n" +
+                            "https://www.football-data.co.uk/mmz4281/1920/E0.csv");
+    }
+
+    @FXML
+    void onVersionButtonAction(ActionEvent event) {
+        try {
+            Stage sourceWindowStage = new Stage();
+            Parent root = FXMLLoader.load(getClass().getResource("/version_window_settings.fxml"));
+            sourceWindowStage.setTitle("Informacje o wersji");
+            sourceWindowStage.setScene(new Scene(root));
+            sourceWindowStage.setResizable(false);
+            sourceWindowStage.initModality(Modality.WINDOW_MODAL);
+            sourceWindowStage.initOwner(mainPane.getScene().getWindow());
+            sourceWindowStage.show();
+        } catch (IOException exception) {
+            System.out.println(exception.getMessage());
+        }
+    }
+
+    @FXML
+    void onGuideButtonAction(ActionEvent event) {
+        teamsLabel.setFont(new Font(12));
+        teamsLabel.setText("");
+        scoreLabel.setFont(new Font(16));
+        scoreLabel.setText("Instrukcja obsługi programu:\n" +
+                            "1. Wybierz plik źródłowy dostępny podając jego adres lub ścieżkę docelową\n" +
+                            "2. Uzupełnij konfigurację wskazując drużynę gospodarzy i drużynę przyjezdną\n" +
+                            "3. Wytypuj wynik meczu!");
     }
 
 }

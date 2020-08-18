@@ -25,13 +25,13 @@
           </Menu>
           <Menu mnemonicParsing="false" text="Pomoc">
             <items>
-                  <MenuItem mnemonicParsing="false" text="Przewodnik" />
-              <MenuItem mnemonicParsing="false" text="Plik źródłowy" />
+                  <MenuItem mnemonicParsing="false" onAction="#onGuideButtonAction" text="Przewodnik" />
+              <MenuItem mnemonicParsing="false" onAction="#onSourceFileAction" text="Plik źródłowy" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="O programie">
             <items>
-              <MenuItem mnemonicParsing="false" text="Wersja" />
+              <MenuItem mnemonicParsing="false" onAction="#onVersionButtonAction" text="Wersja" />
             </items>
           </Menu>
         </menus>
@@ -68,7 +68,7 @@
                   <Font size="96.0" />
                </font>
             </Label>
-            <Label fx:id="teamsLabel" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+            <Label fx:id="teamsLabel" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
                <font>
                   <Font size="24.0" />
                </font>
