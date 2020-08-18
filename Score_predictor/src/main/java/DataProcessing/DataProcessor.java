@@ -25,10 +25,20 @@ public class DataProcessor {
     static public double projectExpectedTeamGoals(ArrayList<Map<String, String>> list, String homeTeam, String awayTeam, boolean homeTeamResult){
         // Home team goals
         if (homeTeamResult)
-            return calculateTeamStrength(list, homeTeam, "HomeTeam", "FTHG", true) * calculateTeamStrength(list, awayTeam, "AwayTeam", "FTHG", false);
+            return calculateTeamStrength(list, homeTeam, findMatchingToken(TokenArrays.homeTeamTokens), findMatchingToken(TokenArrays.homeGoalsTokens), true) * calculateTeamStrength(list, awayTeam, findMatchingToken(TokenArrays.awayTeamTokens), findMatchingToken(TokenArrays.homeGoalsTokens), false);
         // Away team goals
         else
-            return calculateTeamStrength(list, awayTeam, "AwayTeam", "FTAG", true) * calculateTeamStrength(list, homeTeam, "HomeTeam", "FTAG", false);
+            return calculateTeamStrength(list, awayTeam, findMatchingToken(TokenArrays.awayTeamTokens), findMatchingToken(TokenArrays.awayGoalsTokens), true) * calculateTeamStrength(list, homeTeam, findMatchingToken(TokenArrays.homeTeamTokens), findMatchingToken(TokenArrays.awayGoalsTokens), false);
+    }
+    static public String findMatchingToken (String[] tokens){
+        for(String header : DataRetriever.scoresList.get(0).keySet()){
+            for(String token : tokens){
+                if (token.equals(header)) {
+                    return token;
+                }
+            }
+        }
+        return null;
     }
     static public String predictScore(ArrayList<Map<String,String>> list, String homeTeam, String awayTeam){
 

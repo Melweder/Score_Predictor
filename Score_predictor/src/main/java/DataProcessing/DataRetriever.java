@@ -74,7 +74,7 @@ public class DataRetriever {
             return teamsSet;
         }
         for(Map<String,String> map : scoresList){
-            teamsSet.add(map.get("HomeTeam"));
+            teamsSet.add(map.get(DataProcessor.findMatchingToken(TokenArrays.homeTeamTokens)));
         }
         return teamsSet;
     }
