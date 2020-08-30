@@ -1,0 +1,29 @@
+
+
+Version:	3.12
+CmdLine:	E:\Dev\Projekt_liga_pilkarska\Score_predictor\artifacts\Score_predictor_jar\ScorePredictor.exe --l4j-debug
+WOW64:		yes
+Working dir:	E:\Dev\Projekt_liga_pilkarska\Score_predictor\artifacts\Score_predictor_jar\.
+Java min ver:	1.014.000
+Java max ver:	
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8
+Ignore:		1.008.000
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_251
+Ignore:		1.008.000_251
+32-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+32-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+32-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Check:		SOFTWARE\JavaSoft\JDK\13.0.2
+Ignore:		1.013.000_002
+Check:		SOFTWARE\JavaSoft\JDK\14.0.1
+Check launcher:	C:\Program Files\Java\jdk-14.0.1\bin\javaw.exe (OK)
+Match:		1.014.000_001
+Runtime used:	1.014.000_001 (64-bit)
+Launcher:	C:\Program Files\Java\jdk-14.0.1\bin\javaw.exe
+Launcher args:	--module-path E:\Dev\Projekt_liga_pilkarska\Score_predictor\artifacts\Score_predictor_jar\javafx-sdk-14.0.2.1\lib --add-modules=javafx.controls,javafx.fxml -jar "E:\Dev\Projekt_liga_pilkarska\Score_predictor\artifacts\Score_predictor_jar\ScorePredictor.exe"
+Args length:	257/32768 chars
+Exit code:	0
